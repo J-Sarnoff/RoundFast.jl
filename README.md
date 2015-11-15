@@ -1,6 +1,9 @@
 # RoundFast.jl
 fast directed rounding for inline arithmetic
 
+inline directed rounding for +,- are 10x faster than with_rounding() do (op)(a,b) end
+
+inline directed rounding for *,/,sqrt are 2x faster without hardware fma, probably 10x faster with hardware fma
 
 using RoundFast
 
