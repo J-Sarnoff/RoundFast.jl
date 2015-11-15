@@ -1,7 +1,6 @@
 # RoundFast.jl
 fast directed rounding for inline arithmetic
 
-USE
 
 using RoundFast
 
