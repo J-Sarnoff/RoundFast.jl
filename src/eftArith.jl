@@ -20,14 +20,14 @@ end
 #
 @inline function eftRecip{T<:AbstractFloat}(a::T)
      x = one(Float64)/a
-     y = -fma(x,a,-1.0)/a
+     y = -(fma(x,a,-1.0)/a)
      x,y
 end
 
 # when only the sign of y is needed, omit the final division
 @inline function eftRecipApprox{T<:AbstractFloat}(a::T)
      x = one(Float64)/a
-     y = -fma(x,a,-1.0)
+     y = -flipsign(fma(x,a,-1.0),a)
      x,y
 end
 
@@ -103,6 +103,6 @@ end
 # when only the sign of y is needed, omit the final division
 @inline function eftDiv2Approx{T<:AbstractFloat}(a::T,b::T)
      x = a/b
-     y = -fma(x,b,-a)
+     y = -flipsign(fma(x,b,-a),b)
      x,y
 end
