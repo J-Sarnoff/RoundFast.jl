@@ -38,17 +38,19 @@
 =#
 
 
+
 @inline eftRound{T<:AbstractFloat}(hi::T, lo::T, ::RoundingMode{:ToZero}) = 
-    (lo == zero(T) ? hi : (signbit(hi)!=signbit(lo) ? nextNearerToZero(hi) : hi))
+     (((signbit(hi)==signbit(lo)) | (lo==zero(T))) ? hi : nextNearerToZero(hi))
 
 @inline eftRound{T<:AbstractFloat}(hi::T, lo::T, ::RoundingMode{:FromZero}) = 
-    (lo == zero(T) ? hi : (signbit(hi)==signbit(lo) ? nextAwayFromZero(hi) : hi))
+    (((signbit(hi)!=signbit(lo)) | (lo == zero(T))) ? hi : nextAwayFromZero(hi))
 
 @inline eftRound{T<:AbstractFloat}(hi::T, lo::T, ::RoundingMode{:Up}) = 
-    (lo == zero(T) ? hi : (signbit(lo) ? hi : nextFloat(hi)))
+    (((signbit(lo) | (lo == zero(T)))) ? hi : nextFloat(hi))
 
 @inline eftRound{T<:AbstractFloat}(hi::T, lo::T, ::RoundingMode{:Down}) = 
-    (lo == zero(T) ? (signbit(lo) ? prevFloat(hi) : hi))
+    (((signbit(lo) & (lo != zero(T)))) ? prevFloat(hi) : hi)
 
 @inline eftRound{T<:AbstractFloat}(hi::T, lo::T, ::RoundingMode{:Nearest}) = 
     (hi)
+
