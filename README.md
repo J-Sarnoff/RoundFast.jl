@@ -1,22 +1,19 @@
 # RoundFast.jl
-fast directed rounding for inline arithmetic
+Fast directed rounding for inline arithmetic, very fast with hardware fma.
 
-inline directed rounding for +,- are 10x faster than with_rounding() do (op)(a,b) end
+I used https://github.com/johnmyleswhite/Benchmarks.jl for relative timing.
 
-inline directed rounding for *,/,sqrt are 2x faster without hardware fma, probably 10x faster with hardware fma
+With addition and subtraction, I get better than 10x speedup.
+
+With multiply, divide, sqrt, I get 2x speedup without hardware fma. Using hardware that supports fma directly, the speedup should be similar to addition.
+
 
 using RoundFast
 
-for a,b floating point values and rounding a rounding mode
-where op is +,-,*,/,sqrt,square
+for a,b floating point values, op in {+,-,*,/,sqrt,square} and rounding a rounding mode:
+   
+   (the rounding modes are RoundNearest, RoundUp, RoundDown, RoundToZero, RoundFromZero)
 
-(op)(a,b,rounding)
+value = (op)(a,b,rounding)
 
-(+)(a,b,RoundUp),
-  (-)(a,b,RoundDown),  
-
-(*)(a,b,RoundToZero),
-  (/)(a,b,RoundFromZero),
-
-(sqrt)(a,RoundNearest)
 
