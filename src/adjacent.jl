@@ -11,11 +11,11 @@
    in which case the true result is overestimated by eta [the value added/subtracted below]."
 =#
 # exact for |x| > 8.900295434028806e-308
-nextNearerToZero(x::Float64)   = (0.9999999999999999*x)-5.0e-324 # (x-1.1102230246251568e-16*x)-5.0e-324 
-nextAwayFromZero(x::Float64)   = (1.0000000000000002*x)+5.0e-324 # (x+1.1102230246251568e-16*x)+5.0e-324
+nextNearerToZero(x::Float64)   = (x-1.1102230246251568e-16*x)-5.0e-324 # do not simplify
+nextAwayFromZero(x::Float64)   = (x+1.1102230246251568e-16*x)+5.0e-324 # do not simplify
 # exact for |x| > 4.814825f-35
-nextNearerToZero(x::Float32)   = (0.99999994f0*x)-1.435f-42      # (x-5.960465f-8*x)-1.435f-42
-nextAwayFromZero(x::Float32)   = (1.00000010f0*x)+1.435f-42      # (x+5.960465f-8*x)+1.435f-42
+nextNearerToZero(x::Float32)   = (x-5.960465f-8*x)-1.435f-42 # do not simplify
+nextAwayFromZero(x::Float32)   = (x+5.960465f-8*x)+1.435f-42 # do not simplify
 # the multiplicative formulation for Float16 is exact for |x| > Float16(0.25)
 # which is quite coarse, we do not use that here
 nextNearerToZero(x::Float16) = (x < 0) ? nextfloat(x) : prevfloat(x)
