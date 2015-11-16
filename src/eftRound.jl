@@ -53,4 +53,3 @@
 
 @inline eftRound{T<:AbstractFloat}(hi::T, lo::T, ::RoundingMode{:Nearest}) = 
     (hi)
-
