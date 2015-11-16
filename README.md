@@ -16,4 +16,4 @@ for a,b floating point values, op in {+,-,*,/,sqrt,square} and rounding a roundi
 
 value = (op)(a,b,rounding)
 
-
+Note that this offers RoundFromZero for Floats, while Julia v0.4 does not.
