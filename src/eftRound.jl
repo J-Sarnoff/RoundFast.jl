@@ -7,6 +7,7 @@
        +   -   prevfloat(hi)   nextNearerToZero(hi) == prevFloat(hi)
        -   +   hi              hi
        -   -   prevfloat(hi)   nextAwayFromZero(hi) == prevFloat(hi)
+       
        RoundUp
        hi  lo  rounding        fastrounding
        --------------------------------------------
@@ -14,13 +15,15 @@
        +   -   hi              hi
        -   +   nextfloat(hi)   nextNearerToZero(hi) == nextFloat(hi)
        -   -   hi              hi
+       
        RoundFromZero
        hi  lo  rounding        fastrounding
        --------------------------------------------
        +   +   nextfloat(hi)   nextAwayFromZero(hi)
        +   -   hi              hi
        -   +   hi              hi
-       -   -   prevfloat(hi)   nextAwayFromZero(hi
+       -   -   prevfloat(hi)   nextAwayFromZero(hi)
+       
        RoundToZero
        hi  lo  rounding        fastrounding
        --------------------------------------------
@@ -28,7 +31,8 @@
        +   -   prevfloat(hi)   nextNearerToZero(hi)
        -   +   nextfloat(hi)   nextNearerToZero(hi)
        -   -   hi              hi
-      RoundNearest
+       
+       RoundNearest
        hi  lo  rounding        fastrounding
        --------------------------------------------
        +   +   hi              hi
