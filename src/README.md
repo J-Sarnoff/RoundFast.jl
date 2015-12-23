@@ -29,8 +29,8 @@ and having the result of the calculation in RoundNearest, *and knowing that*
 the insignificant part, the part too small to store with the significant result,
 is positive [or if negative]: the result under RoundingDown must be
  
-             prevfloat( the result in RoundNearest )   
-             [or if negative, the result in RoundNearest]
+             prevfloat( the result found in RoundNearest )   
+             [or if negative, the result in RoundNearest ]
  
 ```
 
