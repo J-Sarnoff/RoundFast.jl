@@ -22,7 +22,7 @@ Apply the arithmetic operator, specifying args and then rounding mode.
 
 
 #### the logical connection
-#### with hi,lo bounded intervals
+*( see source files for fastrounding implementation)*
 ```
 
        RoundDown
