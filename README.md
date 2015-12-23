@@ -2,7 +2,7 @@
 Fast directed rounding for inline arithmetic.
 
 
-#### Use RoundFromZero with Float64
+##### RoundFromZero with Float64
 Julia v0.4 does, now.
 
 
