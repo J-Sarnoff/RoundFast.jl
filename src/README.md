@@ -1,7 +1,7 @@
 
 
 #### the logical connection
-*( see source files for fastrounding implementation )*
+*( seeeftRound fastrounding implementation )*
 ```
 
        RoundDown
