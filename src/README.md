@@ -22,10 +22,11 @@ Some applications require Frequent Resetting of and Cascaded Changes to the floa
 Most users are very motivated to avoid this temporal drain.  Some users will find RoundFast is in use.
 
 The Rounding Mode is not changed and the rounding directed arithmetic continues to give correct results.
-````ruby
-Directed Rounding is performed with accurate knowledge of the insignificant part of the RoundNearest result.
-Seeking to calculate with rounding mode RoundingDown, and having the result of the calculation in RoundNearest,
-*and knowing the insignificant part of the result, the part too small to store with the significant result,
+````latex
+Directed Rounding is performed with accurate knowledge of the insignificant part
+of the RoundNearest result.  Seeking to calculate with rounding mode RoundingDown,
+and having the result of the calculation in RoundNearest, *and knowing that*
+the insignificant part, the part too small to store with the significant result,
  is positive: the result calculated RoundingDown is prevfloat( the result in RoundNearest ).
 ```
             
