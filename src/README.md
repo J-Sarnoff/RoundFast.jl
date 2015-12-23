@@ -1,7 +1,7 @@
 
 
 #### the logical connection
-*( seeeftRound fastrounding implementation )*
+*( see eftRound.jl for fastrounding implementation )*
 ```
 
        RoundDown
