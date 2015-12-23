@@ -13,4 +13,7 @@ value = (op)(a,b,rounding)
 
 
 
-**Note that this offers RoundFromZero for Floats, while Julia v0.4 does not.**
+```julia
+"""
+*Note* that **this** _offers_ RoundFromZero for Floats, while Julia v0.4 does not.
+```
