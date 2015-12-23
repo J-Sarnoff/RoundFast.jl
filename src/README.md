@@ -17,7 +17,11 @@
     
 ```
 
-##### This does round fast
+##### This is round fast
 Some applications require Frequent Resetting of and Cascaded Changes to the floating point rounding mode.  
-Most users are very motivated to avoid this temporal drain.  Some users will find RoundFast is in use.  
+Most users are very motivated to avoid this temporal drain.  Some users will find RoundFast is in use.
+
+            The incessant alteration of Rounding Mode     ceased.
+            
+            
  
