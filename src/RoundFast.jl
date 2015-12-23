@@ -5,6 +5,6 @@ import Base:(+),(-),(*),(/),sqrt
 include("adjacent.jl")
 include("eftArith.jl")
 include("eftRound.jl")
-include("roundFast.jl")
+include("rounding.jl")
 
 end # module
