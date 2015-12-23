@@ -36,7 +36,7 @@ the calculation RoundingDown must have the result:
 Error free transformation of an arithmetic operation delivers the significant result with
 some of any numerical residuate -- so the sign of any numerical remainder becomes known.
 With that, the correct action to match the arithmetic calculation with directed rounding 
-is determined.  RoundFast does.
+is determined.  RoundFast does RoundFast.
 
 
             
