@@ -2,13 +2,7 @@
 Fast directed rounding for inline arithmetic.
 
 
-
-With addition and subtraction, I get better than 10x speedup.
-
-With multiply, divide, sqrt, I get 2x speedup without hardware fma. Using hardware that supports fma directly, the speedup should be similar to addition.
-
-
-using RoundFast
+### using RoundFast
 
 for a,b floating point values, op in {+,-,*,/,sqrt,square} and rounding a rounding mode:
    
@@ -17,4 +11,6 @@ for a,b floating point values, op in {+,-,*,/,sqrt,square} and rounding a roundi
 value = (op)(a,b,rounding)       
      c = (+)(a,b,RoundDown)
 
-Note that this offers RoundFromZero for Floats, while Julia v0.4 does not.
+
+
+**Note that this offers RoundFromZero for Floats, while Julia v0.4 does not.**
