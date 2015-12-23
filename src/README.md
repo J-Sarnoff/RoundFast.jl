@@ -23,11 +23,11 @@ Most users are very motivated to avoid this temporal drain.  Some users will fin
 
 The Rounding Mode is not changed and the rounding directed arithmetic continues to give correct results.
 ````latex
-Directed Rounding is performed with accurate knowledge of the insignificant part
-of the RoundNearest result.  Seeking to calculate with rounding mode RoundingDown,
-and having the result of the calculation in RoundNearest, *and knowing that*
-the insignificant part, the part too small to store with the significant result,
-is positive [or if negative]: the result under RoundingDown must be
+Directed Rounding is performed with accurate knowledge of the insignificant
+part of the result under RoundNearest.  With the result of calculating under
+RoundNearest given, *and knowing that* the insignificant part, too small to
+store with the value of the result, if it is positive [or if negative]:
+the calculation RoundingDown must have the result:
  
              prevfloat( the result found in RoundNearest )   
              [or if negative, the result in RoundNearest ]
