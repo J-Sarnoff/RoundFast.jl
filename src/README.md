@@ -27,7 +27,11 @@ Directed Rounding is performed with accurate knowledge of the insignificant part
 of the RoundNearest result.  Seeking to calculate with rounding mode RoundingDown,
 and having the result of the calculation in RoundNearest, *and knowing that*
 the insignificant part, the part too small to store with the significant result,
- is positive: the result calculated RoundingDown is prevfloat( the result in RoundNearest ).
+is positive [or if negative]: the result under RoundingDown must be
+ 
+ prevfloat( the result in RoundNearest ) [or if negative, the result in RoundNearest] .
+ 
 ```
+
             
  
