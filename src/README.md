@@ -1,7 +1,7 @@
 
 #### This is fast rounding
 
-	a.	(*) 			 arithmetic operation to apply
+    a.	(*) 			 arithmetic operation to apply
     b.	(RoundToZero)	 directed rounding mode to use
     c.	(1.7635, 1.3570) values to which the operation shall apply 
     
@@ -16,3 +16,7 @@
     2.3930695_0f0                          # ( for the scrapbook, a Julia first )
     
 ```
+
+##### This does round fast
+
+>> Frequent Setting and Changing of the floating point rounding mode is costly
