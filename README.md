@@ -14,6 +14,5 @@ value = (op)(a,b,rounding)
 
 
 ```julia
-"""
-*Note* that **this** _offers_ RoundFromZero for Floats, while Julia v0.4 does not.
+        """ RoundFast offers RoundFromZero """"
 ```
