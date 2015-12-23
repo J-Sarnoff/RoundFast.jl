@@ -1,7 +1,7 @@
 # RoundFast.jl
-Fast directed rounding for inline arithmetic, very fast with hardware fma.
+Fast directed rounding for inline arithmetic.
 
-I used https://github.com/johnmyleswhite/Benchmarks.jl for relative timing.
+
 
 With addition and subtraction, I get better than 10x speedup.
 
