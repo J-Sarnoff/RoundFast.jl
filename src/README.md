@@ -1,46 +1,12 @@
 
+#### This is fast rounding
 
-#### the logical connection
-*( see eftRound.jl for fastrounding implementation )*
-```
-
-       RoundDown
-       hi  lo  rounding        fastrounding
-       --------------------------------------------
-       +   +   hi              hi
-       +   -   prevfloat(hi)   nextNearerToZero(hi) == prevFloat(hi)
-       -   +   hi              hi
-       -   -   prevfloat(hi)   nextAwayFromZero(hi) == prevFloat(hi)
-       
-       RoundUp
-       hi  lo  rounding        fastrounding
-       --------------------------------------------
-       +   +   nextfloat(hi)   nextAwayFromZero(hi) == nextFloat(hi)
-       +   -   hi              hi
-       -   +   nextfloat(hi)   nextNearerToZero(hi) == nextFloat(hi)
-       -   -   hi              hi
-       
-       RoundFromZero
-       hi  lo  rounding        fastrounding
-       --------------------------------------------
-       +   +   nextfloat(hi)   nextAwayFromZero(hi)
-       +   -   hi              hi
-       -   +   hi              hi
-       -   -   prevfloat(hi)   nextAwayFromZero(hi
-       
-       RoundToZero
-       hi  lo  rounding        fastrounding
-       --------------------------------------------
-       +   +   hi              hi
-       +   -   prevfloat(hi)   nextNearerToZero(hi)
-       -   +   nextfloat(hi)   nextNearerToZero(hi)
-       -   -   hi              hi
-       
-      RoundNearest
-       hi  lo  rounding        fastrounding
-       --------------------------------------------
-       +   +   hi              hi
-       +   -   hi              hi
-       -   +   hi              hi
-       -   -   hi              hi
+	a.	(*) 			 arithmetic operation to apply
+    b.	(RoundToZero)	 directed rounding mode to use
+    c.	(1.7635, 1.3570) values to which the operation shall apply 
+    
+    ```language
+    p = 1.7635
+    r = 1.3570
+    result = (*)(p, r, RoundToZero)
 ```
