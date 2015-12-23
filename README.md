@@ -22,7 +22,7 @@ Apply the arithmetic operator, specifying args and then rounding mode.
 
 
 #### the logical connection
-
+#### with hi,lo bounded intervals
 ```
 
        RoundDown
@@ -66,4 +66,3 @@ Apply the arithmetic operator, specifying args and then rounding mode.
        -   -   hi              hi
 ```
 
-(implemented as eftRound.jl)
