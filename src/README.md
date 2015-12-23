@@ -21,7 +21,8 @@
 Some applications require Frequent Resetting of and Cascaded Changes to the floating point rounding mode.  
 Most users are very motivated to avoid this temporal drain.  Some users will find RoundFast is in use.
 
-            The incessant alteration of Rounding Mode     ceased.
-            
+The Rounding Mode is not changed and the rounding directed arithmetic continues to give correct results.
+
+
             
  
