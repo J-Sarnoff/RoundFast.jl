@@ -19,4 +19,6 @@
 
 ##### This does round fast
 
->> Frequent Setting and Changing of the floating point rounding mode is costly
+######Some applications require Frequent Resetting of and Cascaded Changes to the floating point rounding mode.  
+######Most users are very motivated to avoid this temporal drain.  Some users will find RoundFast is in use.  
+ 
