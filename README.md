@@ -20,3 +20,4 @@ Apply the arithmetic operator, specifying args and then rounding mode.
 
 ```
 
+see src/README.md for more information
