@@ -15,8 +15,7 @@ function eftCube{T<:AbstractFloat}(a::T)
 end
 
 # !!sassafrass!!
-# 'y' must be negated to get the right result
-# I do not know why.
+# extra negations better manage -0.0 
 #
 @inline function eftRecip{T<:AbstractFloat}(a::T)
      x = one(Float64)/a
@@ -25,6 +24,8 @@ end
 end
 
 # when only the sign of y is needed, omit the final division
+# extra negations better manage -0.0 
+#
 @inline function eftRecipApprox{T<:AbstractFloat}(a::T)
      x = one(Float64)/a
      y = flipsign(fma(-x,-a,-1.0),a)
@@ -91,9 +92,8 @@ end
 end
 
 # !!sassafrass!!
-# 'y' must be negated to get the right result
-# I do not know why.
-
+# extra negations better manage -0.0 
+#
 @inline function eftDiv2{T<:AbstractFloat}(a::T,b::T)
      x = a/b
      y = fma(-x,-b,-a)/b
@@ -101,6 +101,8 @@ end
 end
 
 # when only the sign of y is needed, omit the final division
+# extra negations better manage -0.0 
+#
 @inline function eftDiv2Approx{T<:AbstractFloat}(a::T,b::T)
      x = a/b
      y = flipsign(fma(-x,-b,-a),b)
